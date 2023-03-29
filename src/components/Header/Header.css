@@ -1,0 +1,28 @@
+.header {
+  color: yellow;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3em;
+  padding: 0 3em;
+}
+
+.header__logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__nav > li {
+  margin: 0 0 0 1em;
+}
+
+.header__nav-link {
+  font-weight: 700;
+  color: rgb(188, 33, 226);
+}

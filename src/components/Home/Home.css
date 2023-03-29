@@ -1,0 +1,31 @@
+.home {
+  padding: 0 3em;
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 400px;
+}
+
+form > input {
+  margin: 0 0 1em 0;
+  padding: 0.5em 0.25em;
+  outline: none;
+  border: 1px solid gray;
+}
+
+.home__add-book-btn {
+  padding: 0.5em;
+  align-self: flex-end;
+  cursor: pointer;
+  background-color: aquamarine;
+  border: none;
+}
+
+.home__book {
+  font-weight: 700;
+  padding: 0.5em 0;
+}
