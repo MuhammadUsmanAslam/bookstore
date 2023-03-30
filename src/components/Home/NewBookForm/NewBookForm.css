@@ -1,0 +1,21 @@
+.new-book-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 400px;
+}
+
+.new-book-form > input {
+  margin: 0 0 1em 0;
+  padding: 0.5em 0.25em;
+  outline: none;
+  border: 1px solid gray;
+}
+
+.new-book-form--add-book-btn {
+  padding: 0.5em;
+  align-self: flex-end;
+  cursor: pointer;
+  background-color: aquamarine;
+  border: none;
+}
