@@ -18,9 +18,7 @@ function Book(props) {
       <p>
         Title:
         {book.title}
-      </p>
-
-      <p>
+        <br />
         Author:
         {book.author}
       </p>
