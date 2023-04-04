@@ -4,7 +4,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 ToDo List ](#-todo-list-)
+- [📖 Bookstore ](#-bookstore-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -127,9 +127,7 @@ npm run test
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Added new components Home, Categories**
-- **React Router to make the routes work**
-- **Navigation links for all 2 routes**
+- **Redux Setup**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
