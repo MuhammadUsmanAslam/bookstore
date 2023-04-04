@@ -1,17 +1,13 @@
 import './NewBookForm.css';
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-// eslint-disable-next-line
-import PropTypes from 'prop-types';
+import { addBook } from '../../../redux/books/booksSlice';
 
-function NewBookForm(props) {
-  const { books, setBooks } = props;
-
+function NewBookForm() {
   const [newBook, setNewBook] = useState({ title: '', author: '', id: -1 });
 
-  NewBookForm.propTypes = {
-    books: PropTypes.arrayOf.isRequired,
-    setBooks: PropTypes.func.isRequired,
-  };
+  const { books } = useSelector((state) => state.books);
+  const dispatch = useDispatch();
 
   return (
     <form className="new-book-form">
@@ -38,9 +34,8 @@ function NewBookForm(props) {
         onClick={(e) => {
           e.preventDefault();
           if (newBook.title && newBook.author) {
-            setNewBook({ ...newBook, id: books.length });
-            setBooks([...books, newBook]);
-            setNewBook({ title: '', author: '', id: 0 });
+            dispatch(addBook({ title: newBook.title, author: newBook.author, id: books.length }));
+            setNewBook({ title: '', author: '', id: -1 });
           } else {
             alert('Please Add a book first');
           }

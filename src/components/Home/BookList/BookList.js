@@ -1,14 +1,9 @@
 import './BookList.css';
-// eslint-disable-next-line
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 
-function BookList(props) {
-  const { books } = props;
-
-  BookList.propTypes = {
-    books: PropTypes.arrayOf.isRequired,
-  };
+function BookList() {
+  const { books } = useSelector((state) => state.books);
 
   return (
     <ul className="book-list">
