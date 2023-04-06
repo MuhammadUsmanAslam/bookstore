@@ -1,17 +1,25 @@
+import { useEffect } from 'react';
 import './BookList.css';
-import { useSelector } from 'react-redux';
+// import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchBooks } from '../../../redux/books/booksSlice';
 import Book from './Book';
 
 function BookList() {
-  const { books } = useSelector((state) => state.books);
+  const { books, error, isLoading } = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
   return (
     <ul className="book-list">
-      {
-        books.map((book) => (
-          <Book book={book} key={book.id} />
-        ))
-      }
+      {isLoading && <p>Loading</p>}
+      {error && <p>Error</p>}
+      {books && books.map((book) => (
+        <Book book={book} key={book.item_id} />
+      ))}
     </ul>
   );
 }
