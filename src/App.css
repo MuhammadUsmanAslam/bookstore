@@ -1,3 +1,14 @@
 .app {
-  color: aquamarine;
+  background-color: #fafafa;
+}
+
+.btn {
+  padding: 1em 3em;
+  cursor: pointer;
+  border: none;
+  margin: 2em 0;
+  background-color: #0290ff;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
 }

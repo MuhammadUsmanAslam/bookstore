@@ -1,6 +1,92 @@
 .book-list-item {
   font-weight: 700;
-  padding: 0.5em 0;
-  border: 1px solid gray;
+  padding: 2em 1.5em;
+  border: 1px solid #e8e8e8;
+  border-radius: 0.25em;
   margin: 0.5em 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-list-item-left {
+  flex: 1;
+}
+
+.book-list-item-category {
+  font-size: small;
+  color: #858585;
+  padding: 0;
+}
+
+.book-list-item-title {
+  padding: 0.5em 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.book-list-item-author {
+  color: #4386bf;
+  font-size: 0.875rem;
+  padding: 0;
+  font-weight: 400;
+}
+
+.book-list-item-action-list {
+  display: flex;
+  margin: 2em 0 0 0;
+}
+
+.book-list-item-action-list > hr {
+  margin: 0 1em;
+}
+
+.book-list-item-action-list-item > button {
+  cursor: pointer;
+  color: #4386bf;
+  font-weight: 400;
+  border: none;
+  background-color: inherit;
+}
+
+.book-list-item-right {
+  flex: 1;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-list-item-right-left {
+  display: flex;
+  align-items: center;
+}
+
+.book-list-item-right-left-shape {
+  margin: 1em;
+  background-color: #4386bf;
+  height: 5em;
+  width: auto;
+}
+
+.book-list-item-right-left-right > .percentage {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.book-list-item-right-left-right > .completed {
+  font-size: 0.85rem;
+  color: #858585;
+  margin-top: 0.25em;
+}
+
+.book-list-item-right > hr {
+  height: 60%;
+}
+
+.book-list-item-right-right > .chapter-heading {
+  margin: 1em 0;
+  font-size: 0.95em;
+  color: #858585;
+  font-weight: 400;
 }

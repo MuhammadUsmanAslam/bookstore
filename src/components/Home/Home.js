@@ -1,12 +1,12 @@
 import './Home.css';
-import NewBookForm from './NewBookForm/NewBookForm';
 import BookList from './BookList/BookList';
+import NewBookForm from './NewBookForm/NewBookForm';
 
 function Home() {
   return (
     <div className="home">
-      <NewBookForm />
       <BookList />
+      <NewBookForm />
     </div>
   );
 }
