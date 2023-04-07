@@ -1,21 +1,27 @@
 .new-book-form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   min-width: 400px;
+}
+
+.new-book-form > h2 {
+  color: #888;
+  margin: 1em 0;
 }
 
 .new-book-form > input {
   margin: 0 0 1em 0;
-  padding: 0.5em 0.25em;
-  outline: none;
+  padding: 1em 0.5em;
   border: 1px solid gray;
+  outline: 2px solid none;
+  border-radius: 5px;
+}
+
+.new-book-form > input:focus {
+  outline: 2px solid #a5a5a5;
 }
 
 .new-book-form--add-book-btn {
-  padding: 0.5em;
   align-self: flex-end;
-  cursor: pointer;
-  background-color: aquamarine;
-  border: none;
 }

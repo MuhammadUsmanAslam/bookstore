@@ -6,14 +6,15 @@ import { addBook, addNewBook } from '../../../redux/books/booksSlice';
 
 function NewBookForm() {
   const [newBook, setNewBook] = useState({
-    title: '', author: '', item_id: -1, category: null,
+    title: '', author: '', item_id: -1, category: '',
   });
 
   const dispatch = useDispatch();
 
   return (
     <form className="new-book-form">
-      <h1>Add New Book</h1>
+      <hr />
+      <h2>Add New Book</h2>
       <input
         type="text"
         placeholder="Book Title"
@@ -30,8 +31,16 @@ function NewBookForm() {
           setNewBook({ ...newBook, author: e.target.value });
         }}
       />
+      <input
+        type="text"
+        placeholder="Book Category"
+        value={newBook.category}
+        onChange={(e) => {
+          setNewBook({ ...newBook, category: e.target.value });
+        }}
+      />
       <button
-        className="new-book-form--add-book-btn"
+        className="btn new-book-form--add-book-btn"
         type="submit"
         onClick={(e) => {
           e.preventDefault();
@@ -39,12 +48,12 @@ function NewBookForm() {
             ...newBook,
             item_id: uuidv4(),
           };
-          if (newBook.title && newBook.author) {
+          if (newBook.title && newBook.author && newBook.category) {
             dispatch(addNewBook(newBookToAdd))
               .then(() => {
                 dispatch(addBook(newBookToAdd));
                 setNewBook({
-                  title: '', author: '', item_id: -1, category: null,
+                  title: '', author: '', item_id: -1, category: '',
                 });
               });
           } else {
@@ -52,7 +61,7 @@ function NewBookForm() {
           }
         }}
       >
-        Add Book
+        ADD BOOK
       </button>
     </form>
   );

@@ -14,8 +14,9 @@ function BookList() {
 
   return (
     <ul className="book-list">
-      {isLoading && <p>Loading</p>}
+      {isLoading && <p>Loading...</p>}
       {error && <p>Error</p>}
+      {!books.length && <p>No Books to display.Fill the form below to Add New Book</p>}
       {books && books.map((book) => (
         <Book book={book} key={book.item_id} />
       ))}
