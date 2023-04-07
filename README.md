@@ -67,7 +67,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://muhammadusmanaslam.github.io/bookstore/)
+- [Live Demo Link](https://bookstore-git-development-muhammadusmanaslam.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

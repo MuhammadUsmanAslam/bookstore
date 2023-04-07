@@ -1,8 +1,7 @@
 import './Book.css';
 import { useDispatch } from 'react-redux';
-import { removeBook, deleteBook } from '../../../redux/books/booksSlice';
-// eslint-disable-next-line
 import PropTypes from 'prop-types';
+import { removeBook, deleteBook } from '../../../redux/books/booksSlice';
 
 function Book(props) {
   const { book } = props;
