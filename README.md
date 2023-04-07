@@ -127,7 +127,7 @@ npm run test
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Redux Setup**
+- **Styling according to zeplin design**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
